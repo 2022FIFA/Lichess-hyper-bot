@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 
 from http.client import RemoteDisconnected
 
-__version__ = "1.2.0"
+__version__ = "1.1.4"
 
 terminated = False
 
@@ -233,8 +233,9 @@ def play_game(li, game_id, control_queue, engine_factory, user_profile, config, 
         def __init__(self, room):
             self.room = room
     opponent = game.black.name if game.white.name == user_profile["username"] else game.white.name
-    conversation.send_reply(SendLine('player'), f'Made by @prajeethishere, All The Best @{opponent}')
-    conversation.send_reply(SendLine('spectator'), f'Made by @prajeethishere, Good Luck @{opponent}')
+    conversation.send_reply(SendLine('player'), f'Programmed by @EshanHasaranga200703, Thanks for playing {opponent}!')
+    conversation.send_reply(SendLine('player'), f'Good luck!')
+    conversation.send_reply(SendLine('spectator'), f'Programmed @EshanHasaranga200703, Thanks for spectating:)')
     
     variant=game.perf_name
 
