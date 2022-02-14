@@ -26,10 +26,9 @@ class Conversation:
             self.send_reply(line, "Waiting 60 seconds...")
         elif cmd == "name":
             name = game.me.name
-            self.send_reply(line, "{} running {} (lichess-bot v{} )".format(name, self.engine.name(), self.version))
+            self.send_reply(line, "{} running {} (lichess-bot v{} Coded by @Servan5635)".format(name, self.engine.name(), self.version))
         elif cmd == "howto":
-            self.send_reply(line, "How to run your own bot: Check out my owner's blog")
-            self.send_reply(line, "My owner is @EshanHasaranga200703")
+            self.send_reply(line, "How to run your own bot: Check out @EshanHasaranga200703 's blog About making lichess bot")
         elif cmd == "eval" and line.room == "spectator":
             stats = self.engine.get_stats()
             self.send_reply(line, ", ".join(stats))
